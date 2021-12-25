@@ -8,7 +8,7 @@ import browsersync from "browser-sync";
 
 gulp.task("serve", () => {
     browsersync.init({
-        server: "./dist/",
+        server: "./docs/",
         port: 4000,
         notify: false
     });
@@ -28,6 +28,6 @@ gulp.task("serve", () => {
     gulp.watch(paths.json.watch, gulp.parallel("json"));
     gulp.watch(paths.pdf.watch, gulp.parallel("pdf"));
     gulp.watch(paths.php.watch, gulp.parallel("php"));
-    gulp.watch(paths.videos.watch, gulp.parallel("videos")); 
+    gulp.watch(paths.videos.watch, gulp.parallel("videos"));
     gulp.watch(paths.views.pagelist, gulp.parallel("list-pages"));
 });
