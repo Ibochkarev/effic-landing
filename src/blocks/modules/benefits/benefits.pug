@@ -1,0 +1,42 @@
+-
+  const benefits = [
+    {
+      title: "VIRTUAL PAIN EDUCATION SUMMIT",
+      text: "An online event for all healthcare professionals interested in advancing their knowledge in pain management",
+      link: 'https://europeanpainfederation.eu/virtual-pain-education-summit/',
+      newWindowOpen: true
+    },
+    {
+      title: "EUROPEAN PAIN FEDERATION ACADEMY",
+      text: "The biggest European pain education community offering many benefits from reduced fees to events and exams to exclusive access to our EFIC Academy Education Platform",
+      link: 'https://europeanpainfederation.eu/efic-academy/',
+      newWindowOpen: true
+    },
+    {
+      title: "CONGRESS — PAIN IN EUROPE XII",
+      subtitle: "27–30 April 2022, Dublin",
+      text: "The main European congress for all healthcare professionals working in pain management featuring cutting-edge pain research and hot topics in pain science",
+      link: '#',
+      newWindowOpen: false
+    }
+  ]
+
+section.benefits
+  .l-default
+    .benefits__wrapper
+      h2.benefits__title.title.title--h2.element-animation  How you can benefit
+        br
+        | from the European Pain Federation
+      .benefits__list
+        each benefits_item in benefits
+          .benefits__list-item.element-animation
+            .benefits__list-item__info
+              .benefits__list-item__title= benefits_item.title
+              .benefits__list-item__subtitle= benefits_item.subtitle
+              .benefits__list-item__text= benefits_item.text
+            - if (benefits_item.newWindowOpen == true)
+              a.benefits__list-item__button.btn(href=benefits_item.link target="_blank")
+                span Sign Up Here
+            - else
+              a.benefits__list-item__button.btn(href=benefits_item.link)
+                span Sign Up Here

@@ -1,0 +1,38 @@
+-
+  const effic2019 = [
+    {
+      num: "98",
+      text: "Would attend the Congress again"
+    },
+    {
+      num: "94",
+      text: "Agreed the Congress is likely to benefit their career as a researcher"
+    },
+    {
+      num: "96",
+      text: "Agreed that the scientific programme was supported by scientific evidence"
+    },
+    {
+      num: "96",
+      text: "Agreed the Congress improved their understanding of pain science"
+    }
+  ]
+
+section.effic2019
+  .l-default
+    .effic2019__wrapper
+      .effic2019__headline
+        h2.effic2019__title.title.title--h2.element-animation Here is what attendees of #EFIC2019 thought:
+        .effic2019__like
+          img(src="img/effic2019/like.svg", alt="")
+      .effic2019__list
+        each effic_item in effic2019
+          .effic2019__item.element-animation
+            .effic2019__item-num
+              span= effic_item.num
+              | %
+            .effic2019__item-text= effic_item.text
+      .effic2019__btn-wrap
+        a.effic2019__btn.btn.btn--orange(href="https://share.hsforms.com/1Qu1GRfukTNGokRejqd_dbA4hboq", target="_blank") Sign Up Here For All
+          br
+          | #EFIC2022 Updates

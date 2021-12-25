@@ -1,0 +1,27 @@
+-
+    const images=[
+        {
+            img: "01",
+        },
+        {
+            img: "01",
+        },
+    ];
+
+section.europen-congress
+    .l-default
+        .europen-congress__wrapper
+            h2.europen-congress__title.title.title--h2.element-animation Be Part
+                br
+                | of the Largest European Congress
+                br
+                | on Pain in 2022
+            .swiper-container.europen-congress__slider
+                .swiper-wrapper
+                    each slide in images
+                        .swiper-slide
+                            picture
+                                source(srcset="img/europen-congress/" + slide.img + ".webp" type="image/webp")
+                                source(srcset="img/europen-congress/" + slide.img + ".png" type="image/png")
+                                img(src="img/europen-congress/" + slide.img + ".png" alt="")
+            .swiper-pagination

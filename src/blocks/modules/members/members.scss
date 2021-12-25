@@ -1,0 +1,123 @@
+.members {
+  margin-bottom: 232px;
+
+  @media (max-width: 1449px) {
+    margin-bottom: 160px;
+  }
+
+  @media (max-width: 1199px) {
+    margin-bottom: 65px;
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+    text-transform: none;
+    color: $a-color-green;
+
+    @media (max-width: 1449px) {
+      margin-bottom: 30px;
+    }
+
+    br {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    margin-bottom: 48px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 22px;
+
+    @media (max-width: 1199px) {
+      grid-gap: 15px;
+    }
+
+    @media (max-width: 659px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 439px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__btn {
+    &-wrap {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (max-width: 659px) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    background: rgba(#239d4a, 0.2);
+    border-radius: 6px;
+
+    &-image {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(35, 157, 74, 0.2),
+          rgba(35, 157, 74, 0.2)
+        );
+        content: "";
+      }
+    }
+
+    &-info {
+      padding: 24px 60px 24px 24px;
+
+      @media (max-width: 1199px) {
+        padding: 16px 35px 16px 16px;
+      }
+
+      @media (max-width: 659px) {
+        padding: 10px 25px 10px 10px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: $a-color-green;
+
+      @media (max-width: 1449px) {
+        font-size: 18px;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: $a-color-blue;
+
+      @media (max-width: 1449px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.europen-congress {
+  padding: 78px 0 120px;
+
+  @media (max-width: 1449px) {
+    padding: 45px 0 75px;
+  }
+
+  &__title {
+    margin: 0 auto 37px;
+    text-align: center;
+    color: $a-color-blue;
+
+    br {
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    width: 100%;
+    margin: 56px auto 0;
+
+    @media screen and (max-width: 991px) {
+      margin: 40px auto 0;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background: lighten($color: $a-color-green, $amount: 0.3);
+
+    &:not(:last-child) {
+      margin-right: 16px;
+
+      @media screen and (max-width: 991px) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

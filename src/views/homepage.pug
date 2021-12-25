@@ -1,0 +1,25 @@
+extends layouts/default
+include helpers/_mixins
+
+block variables
+  - const title = "Главная страница проекта"
+
+block content
+  include ../blocks/modules/loader/loader.pug
+  include ../blocks/modules/header/header.pug
+  main.main
+    include ../blocks/modules/first-section/first-section.pug
+    include ../blocks/modules/efic2019/efic2019.pug
+    include ../blocks/modules/program/program.pug
+    include ../blocks/modules/video/video.pug
+    include ../blocks/modules/why-attend/why-attend.pug
+    include ../blocks/modules/europen-congress/europen-congress.pug
+    include ../blocks/modules/members/members.pug
+    include ../blocks/modules/who-attend/who-attend.pug
+    include ../blocks/modules/tweets/tweets.pug
+    include ../blocks/modules/benefits/benefits.pug
+  include ../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")

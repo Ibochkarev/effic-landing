@@ -1,0 +1,52 @@
+-
+  const whyAttend = [
+    {
+      title: "Find out about current and future developments in pain science",
+      img: "01.svg"
+    },
+    {
+      title: "Network with 3,500 healthcare professionals from all over the world",
+      img: "02.svg"
+    },
+    {
+      title: "Share cutting-edge research and learn from distinguished experts in the field",
+      img: "03.svg"
+    },
+    {
+      title: "Renew your clinical management skills through refresher sessions",
+      img: "04.svg"
+    },
+    {
+      title: "Prepare for the European Diplomas in Pain Medicine and Pain Physiotherapy",
+      img: "05.svg"
+    },
+    {
+      title: "Be part of the largest European scientific congress on pain in 2022",
+      img: "06.svg"
+    }
+  ]
+
+section.why-attend
+  .l-default
+    .why-attend__wrapper
+      h2.why-attend__title.title.title--h2.element-animation Why attend #EFIC2022?
+      .why-attend__list
+        each attend_item in whyAttend
+          .why-attend__item.element-animation
+            .why-attend__item-icon
+              img(src="img/why-attend/" + attend_item.img alt="")
+            .why-attend__item-title= attend_item.title
+  .l-default--full
+    .why-attend__buttons
+      a.why-attend__button.btn(href="/abstract-submission/") Submit
+        br
+        | your Abstract
+      a.why-attend__button.btn(href="/registration/") Register
+        br
+        | Now
+      a.why-attend__button.btn(href="/sponsors-exhibitors/") Sponsors &
+        br
+        | Exhibitions
+      a.why-attend__button.btn(href="/efic2022-discover-dublin/") Discover our Host
+        br
+        | City Dublin

@@ -1,0 +1,26 @@
+-
+  const programme = [
+    {
+      title: "Programme Overview",
+      icon: "overview.svg",
+      link: "https://efic-congress.org/wp-content/uploads/2021/11/EFIC-2021-Timetable-skeleton-website-16.11.2021.pdf"
+    },
+    {
+      title: "Interactive Programme",
+      icon: "interactive.svg",
+      link: "https://efic2022.abstractserver.com/program/#/program/1/horizontal"
+    }
+  ]
+
+section.programme
+  .l-default
+    .programme__wrapper
+      h2.programme__title.title.title--h2.element-animation View
+        br
+        | the Preliminary Programme
+      .programme__list
+        each programme_item in programme
+          a.programme__item.element-animation(href=programme_item.link, target="_blank")
+            .programme__item-icon
+              img(src="img/programme/" + programme_item.icon alt=programme_item.title)
+            .programme__item-title= programme_item.title

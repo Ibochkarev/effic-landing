@@ -1,0 +1,37 @@
+-
+  const members = [
+    {
+      title: "Eija Kalso",
+      text: "MD, DMedSci, graduated from the Medical Faculty of the University of Helsinki where she also defended...",
+      img: "01.jpg"
+    },
+    {
+      title: "Albert Dahan",
+      text: "Prof. Albert Dahan graduated from de Vrije University in Amsterdam (MD; 1986) and Leiden University (PhD; 1990)...",
+      img: "02.jpg"
+    },
+    {
+      title: "Katja Boersma",
+      text: "Professor of Psychology at the Center of Health and Medical Psychology, Örebro University, Sweden...",
+      img: "03.jpg"
+    }
+  ]
+
+section.members
+  .l-default
+    .who-attend__wrapper
+      h2.members__title.title.title--h2.element-animation Meet the Scientific Programme
+        br
+        | Committee Members
+      .members__list
+        each members_item in members
+          .members__item.element-animation
+            .members__item-image
+              img(src="img/members/" + members_item.img alt="")
+            .members__item-info
+              .members__item-title= members_item.title
+              .members__item-text= members_item.text
+      .members__btn-wrap
+        a.members__btn.btn(href="/efic2022-committee/") View All #EFIC2022
+          br
+          | SPC Members
