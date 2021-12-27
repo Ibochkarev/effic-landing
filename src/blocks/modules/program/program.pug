@@ -22,5 +22,5 @@ section.programme
         each programme_item in programme
           a.programme__item.element-animation(href=programme_item.link, target="_blank")
             .programme__item-icon
-              img(src="img/programme/" + programme_item.icon alt=programme_item.title)
+              img.lazy(data-src="img/programme/" + programme_item.icon alt=programme_item.title)
             .programme__item-title= programme_item.title

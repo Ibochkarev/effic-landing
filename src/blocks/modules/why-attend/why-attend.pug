@@ -34,7 +34,7 @@ section.why-attend
         each attend_item in whyAttend
           .why-attend__item.element-animation
             .why-attend__item-icon
-              img(src="img/why-attend/" + attend_item.img alt="")
+              img.lazy(data-src="img/why-attend/" + attend_item.img alt="")
             .why-attend__item-title= attend_item.title
   .l-default--full
     .why-attend__buttons

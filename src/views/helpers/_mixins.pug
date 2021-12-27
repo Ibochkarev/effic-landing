@@ -14,8 +14,14 @@ mixin svgColor(name, modClass)
   svg(class="ico ico-color-" + name + modClass)
     use(xlink:href= 'img/sprite-color.svg#ico-color-' + name)
 
-mixin webp(name, type='jpg',alt)
-  picture
-    source(srcset="/img/"+name+".webp" type="image/webp")
-    source(srcset="/img/"+name+"."+type+"" type="image/"+type+"")
-    img(src="/img/"+name+"."+type+"" alt=""+alt+"")
+mixin webp(name, typeImg, lazy, alt)
+  if lazy == undefined
+    picture
+      source(srcset="/img/"+name+".webp" type="image/webp")
+      source(srcset="/img/"+name+"."+typeImg+"" type="image/"+typeImg+"")
+      img(src="/img/"+name+"."+typeImg+"" alt=""+alt+"")
+  else 
+    picture
+      source(data-srcset="/img/"+name+".webp" type="image/webp")
+      source(data-srcset="/img/"+name+"."+typeImg+"" type="image/"+typeImg+"")
+      img(data-src="/img/"+name+"."+typeImg+"" alt=""+alt+"" class=lazy)

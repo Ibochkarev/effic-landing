@@ -28,33 +28,74 @@
   <body>
     <div class="loader"></div>
     <header class="header">
-      <div class="l-default">
+      <div class="l-default--full">
         <div class="header__wrapper">
           <div class="header__logo">
-            <svg class="ico ico-mono-logo">
-              <use xlink:href="img/sprite-mono.svg#ico-mono-logo"></use>
-            </svg>
+            <picture>
+              <source data-srcset="/img/header/logo.webp" type="image/webp"/>
+              <source data-srcset="/img/header/logo.png" type="image/png"/><img class="lazy" data-src="/img/header/logo.png" alt="undefined"/>
+            </picture>
           </div>
-          <div class="header__burger">
-            <svg class="ico ico-mono-burger">
-              <use xlink:href="img/sprite-mono.svg#ico-mono-burger"></use>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="header__menu">
-        <div class="header__menu-container">
-          <div class="header__menu-top">
-            <div class="l-menu">
-              <div class="header__burger">
-                <svg class="ico ico-mono-burger">
-                  <use xlink:href="img/sprite-mono.svg#ico-mono-burger"></use>
+          <div class="header__right">
+            <div class="header__menu-wrapper">
+              <div class="header__menu">
+                <div class="header__menu-item"> 
+                  <div class="header__menu-link"><a href="https://efic-congress.org/registration/">Registration</a>
+                  </div>
+                </div>
+                <div class="header__menu-item"> 
+                  <div class="header__menu-link"><span>Congress information</span>
+                    <div class="header__menu-arrow"> 
+                      <svg class="ico ico-mono-dropdown-arrow">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-dropdown-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__submenu"> <a class="header__submenu-item" href="https://efic-congress.org/financial-aid/">Financial Aid</a><a class="header__submenu-item" href="https://efic-congress.org/efic2022-welcome-messages/">Welcome to #EFIC2022</a><a class="header__submenu-item" href="https://efic-congress.org/efic2022-discover-dublin/">Discover Dublin</a><a class="header__submenu-item" href="https://efic-congress.org/venue/">Our Venue</a><a class="header__submenu-item" href="https://efic-congress.org/health-and-safety/">Health &amp; Safety</a>
+                  </div>
+                </div>
+                <div class="header__menu-item"> 
+                  <div class="header__menu-link"><span>Scientific Information</span>
+                    <div class="header__menu-arrow"> 
+                      <svg class="ico ico-mono-dropdown-arrow">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-dropdown-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__submenu"> <a class="header__submenu-item" href="https://efic-congress.org/scientific-programme/">Scientific Programme</a><a class="header__submenu-item" href="https://efic-congress.org/efic2022-plenary-sessions/">#EFIC2022 Plenary Sessions</a><a class="header__submenu-item" href="https://efic-congress.org/abstract-submission/">Abstract Submission</a><a class="header__submenu-item" href="https://efic-congress.org/congress-topics/">Congress Topics</a><a class="header__submenu-item" href="https://efic-congress.org/efic2022-committee/">Scientific Programme Committee</a><a class="header__submenu-item" href="https://efic-congress.org/efic2022-workshop-submission/">Workshop Submission</a>
+                  </div>
+                </div>
+                <div class="header__menu-item"> 
+                  <div class="header__menu-link"><a href="https://efic-congress.org/news/">News</a>
+                    <div class="header__menu-arrow"> 
+                      <svg class="ico ico-mono-dropdown-arrow">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-dropdown-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__submenu"> <a class="header__submenu-item" href="https://efic-congress.org/news/">Newsroom</a><a class="header__submenu-item" href="https://efic-congress.org/promotional-toolkit/">Promotional Toolkit</a><a class="header__submenu-item" href="https://efic-congress.org/contact/">Contact</a>
+                  </div>
+                </div>
+                <div class="header__menu-item"> 
+                  <div class="header__menu-link"><a href="https://efic-congress.org/sponsors-exhibitors/">Sponsors &amp; Exhibitors</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__burger"><span> </span><span> </span><span> </span></div>
+              <div class="header__search"> 
+                <svg class="ico ico-mono-search">
+                  <use xlink:href="img/sprite-mono.svg#ico-mono-search"></use>
                 </svg>
               </div>
+            </div>
+            <div class="header__form hide">
+              <input type="text" placeholder="Search ...">
+              <div class="header__form-close"> <span> </span><span> </span></div>
             </div>
           </div>
         </div>
       </div>
+      <div class="header__mobile"></div>
     </header>
     <main class="main">
       <section class="first-section">
@@ -64,7 +105,12 @@
           </div>
         </div>
         <div class="l-default--full">
-          <div class="first-section__banner"><img src="img/first-section/banner.jpg" alt=""></div>
+          <div class="first-section__banner">
+            <picture>
+              <source data-srcset="/img/first-section/banner.webp" type="image/webp"/>
+              <source data-srcset="/img/first-section/banner.jpg" type="image/jpg"/><img class="lazy" data-src="/img/first-section/banner.jpg" alt="undefined"/>
+            </picture>
+          </div>
         </div>
       </section>
       <section class="effic2019">
@@ -72,7 +118,7 @@
           <div class="effic2019__wrapper">
             <div class="effic2019__headline">
               <h2 class="effic2019__title title title--h2 element-animation">Here is what attendees of #EFIC2019 thought:</h2>
-              <div class="effic2019__like"><img src="img/effic2019/like.svg" alt=""></div>
+              <div class="effic2019__like"><img class="lazy" data-src="img/effic2019/like.svg" alt=""></div>
             </div>
             <div class="effic2019__list">
               <div class="effic2019__item element-animation">
@@ -101,9 +147,9 @@
           <div class="programme__wrapper">
             <h2 class="programme__title title title--h2 element-animation">View<br>the Preliminary Programme</h2>
             <div class="programme__list"><a class="programme__item element-animation" href="https://efic-congress.org/wp-content/uploads/2021/11/EFIC-2021-Timetable-skeleton-website-16.11.2021.pdf" target="_blank">
-                <div class="programme__item-icon"><img src="img/programme/overview.svg" alt="Programme Overview"></div>
+                <div class="programme__item-icon"><img class="lazy" data-src="img/programme/overview.svg" alt="Programme Overview"></div>
                 <div class="programme__item-title">Programme Overview</div></a><a class="programme__item element-animation" href="https://efic2022.abstractserver.com/program/#/program/1/horizontal" target="_blank">
-                <div class="programme__item-icon"><img src="img/programme/interactive.svg" alt="Interactive Programme"></div>
+                <div class="programme__item-icon"><img class="lazy" data-src="img/programme/interactive.svg" alt="Interactive Programme"></div>
                 <div class="programme__item-title">Interactive Programme</div></a>
             </div>
           </div>
@@ -111,8 +157,8 @@
       </section>
       <div class="section-video">
         <div class="l-default--full">
-          <video>
-            <source src="videos/video/promo.mp4" poster="img/video/poster.jpg">
+          <video type="video/mp4" poster="img/video/poster.jpg">
+            <source class="lazy" data-src="videos/video/promo.mp4">
           </video>
         </div>
       </div>
@@ -122,27 +168,27 @@
             <h2 class="why-attend__title title title--h2 element-animation">Why attend #EFIC2022?</h2>
             <div class="why-attend__list">
               <div class="why-attend__item element-animation">
-                <div class="why-attend__item-icon"><img src="img/why-attend/01.svg" alt=""></div>
+                <div class="why-attend__item-icon"><img class="lazy" data-src="img/why-attend/01.svg" alt=""></div>
                 <div class="why-attend__item-title">Find out about current and future developments in pain science</div>
               </div>
               <div class="why-attend__item element-animation">
-                <div class="why-attend__item-icon"><img src="img/why-attend/02.svg" alt=""></div>
+                <div class="why-attend__item-icon"><img class="lazy" data-src="img/why-attend/02.svg" alt=""></div>
                 <div class="why-attend__item-title">Network with 3,500 healthcare professionals from all over the world</div>
               </div>
               <div class="why-attend__item element-animation">
-                <div class="why-attend__item-icon"><img src="img/why-attend/03.svg" alt=""></div>
+                <div class="why-attend__item-icon"><img class="lazy" data-src="img/why-attend/03.svg" alt=""></div>
                 <div class="why-attend__item-title">Share cutting-edge research and learn from distinguished experts in the field</div>
               </div>
               <div class="why-attend__item element-animation">
-                <div class="why-attend__item-icon"><img src="img/why-attend/04.svg" alt=""></div>
+                <div class="why-attend__item-icon"><img class="lazy" data-src="img/why-attend/04.svg" alt=""></div>
                 <div class="why-attend__item-title">Renew your clinical management skills through refresher sessions</div>
               </div>
               <div class="why-attend__item element-animation">
-                <div class="why-attend__item-icon"><img src="img/why-attend/05.svg" alt=""></div>
+                <div class="why-attend__item-icon"><img class="lazy" data-src="img/why-attend/05.svg" alt=""></div>
                 <div class="why-attend__item-title">Prepare for the European Diplomas in Pain Medicine and Pain Physiotherapy</div>
               </div>
               <div class="why-attend__item element-animation">
-                <div class="why-attend__item-icon"><img src="img/why-attend/06.svg" alt=""></div>
+                <div class="why-attend__item-icon"><img class="lazy" data-src="img/why-attend/06.svg" alt=""></div>
                 <div class="why-attend__item-title">Be part of the largest European scientific congress on pain in 2022</div>
               </div>
             </div>
@@ -182,21 +228,36 @@
             <h2 class="members__title title title--h2 element-animation">Meet the Scientific Programme<br>Committee Members</h2>
             <div class="members__list">
               <div class="members__item element-animation">
-                <div class="members__item-image"><img src="img/members/01.jpg" alt=""></div>
+                <div class="members__item-image">
+                  <picture>
+                    <source data-srcset="/img/members/01.webp" type="image/webp"/>
+                    <source data-srcset="/img/members/01.jpg" type="image/jpg"/><img class="lazy" data-src="/img/members/01.jpg" alt="undefined"/>
+                  </picture>
+                </div>
                 <div class="members__item-info">
                   <div class="members__item-title">Eija Kalso</div>
                   <div class="members__item-text">MD, DMedSci, graduated from the Medical Faculty of the University of Helsinki where she also defended...</div>
                 </div>
               </div>
               <div class="members__item element-animation">
-                <div class="members__item-image"><img src="img/members/02.jpg" alt=""></div>
+                <div class="members__item-image">
+                  <picture>
+                    <source data-srcset="/img/members/02.webp" type="image/webp"/>
+                    <source data-srcset="/img/members/02.jpg" type="image/jpg"/><img class="lazy" data-src="/img/members/02.jpg" alt="undefined"/>
+                  </picture>
+                </div>
                 <div class="members__item-info">
                   <div class="members__item-title">Albert Dahan</div>
                   <div class="members__item-text">Prof. Albert Dahan graduated from de Vrije University in Amsterdam (MD; 1986) and Leiden University (PhD; 1990)...</div>
                 </div>
               </div>
               <div class="members__item element-animation">
-                <div class="members__item-image"><img src="img/members/03.jpg" alt=""></div>
+                <div class="members__item-image">
+                  <picture>
+                    <source data-srcset="/img/members/03.webp" type="image/webp"/>
+                    <source data-srcset="/img/members/03.jpg" type="image/jpg"/><img class="lazy" data-src="/img/members/03.jpg" alt="undefined"/>
+                  </picture>
+                </div>
                 <div class="members__item-info">
                   <div class="members__item-title">Katja Boersma</div>
                   <div class="members__item-text">Professor of Psychology at the Center of Health and Medical Psychology, Örebro University, Sweden...</div>
@@ -213,28 +274,48 @@
             <h2 class="who-attend__title title title--h2 element-animation">Who Should Attend #EFIC2022?</h2>
             <div class="who-attend__list">
               <div class="who-attend__item element-animation">
-                <div class="who-attend__item-image"><img src="img/who-attend/01.jpg" alt=""></div>
+                <div class="who-attend__item-image">
+                  <picture>
+                    <source data-srcset="/img/who-attend/01.webp" type="image/webp"/>
+                    <source data-srcset="/img/who-attend/01.jpg" type="image/jpg"/><img class="lazy" data-src="/img/who-attend/01.jpg" alt="undefined"/>
+                  </picture>
+                </div>
                 <div class="who-attend__item-info">
                   <div class="who-attend__item-title">RESEARCHERS</div>
                   <div class="who-attend__item-text">EFIC is the largest cutting-edge pain research congress in Europe</div>
                 </div>
               </div>
               <div class="who-attend__item element-animation">
-                <div class="who-attend__item-image"><img src="img/who-attend/02.jpg" alt=""></div>
+                <div class="who-attend__item-image">
+                  <picture>
+                    <source data-srcset="/img/who-attend/02.webp" type="image/webp"/>
+                    <source data-srcset="/img/who-attend/02.jpg" type="image/jpg"/><img class="lazy" data-src="/img/who-attend/02.jpg" alt="undefined"/>
+                  </picture>
+                </div>
                 <div class="who-attend__item-info">
                   <div class="who-attend__item-title">CLINICIANS</div>
                   <div class="who-attend__item-text">Discuss recent clinical findings with renowned experts in their field and refresh your basic pain practice knowledge</div>
                 </div>
               </div>
               <div class="who-attend__item element-animation">
-                <div class="who-attend__item-image"><img src="img/who-attend/03.jpg" alt=""></div>
+                <div class="who-attend__item-image">
+                  <picture>
+                    <source data-srcset="/img/who-attend/03.webp" type="image/webp"/>
+                    <source data-srcset="/img/who-attend/03.jpg" type="image/jpg"/><img class="lazy" data-src="/img/who-attend/03.jpg" alt="undefined"/>
+                  </picture>
+                </div>
                 <div class="who-attend__item-info">
                   <div class="who-attend__item-title">ALLIED PROFESSIONALS</div>
                   <div class="who-attend__item-text">EFIC promotes interprofessionalism and all healthcare professionals will benefit and find content to their needs</div>
                 </div>
               </div>
               <div class="who-attend__item element-animation">
-                <div class="who-attend__item-image"><img src="img/who-attend/04.jpg" alt=""></div>
+                <div class="who-attend__item-image">
+                  <picture>
+                    <source data-srcset="/img/who-attend/04.webp" type="image/webp"/>
+                    <source data-srcset="/img/who-attend/04.jpg" type="image/jpg"/><img class="lazy" data-src="/img/who-attend/04.jpg" alt="undefined"/>
+                  </picture>
+                </div>
                 <div class="who-attend__item-info">
                   <div class="who-attend__item-title">GENERAL PRACTICIONERS</div>
                   <div class="who-attend__item-text">In 2022 we are adding a special focus for GPs, providing generalists with the information they need to understand pain</div>
@@ -287,7 +368,11 @@
     <footer class="footer">
       <div class="l-default">
         <div class="footer__wrapper">
-          <div class="footer__col"><a class="footer__logo" href="https://efic-congress.org/"><img src="img/footer/logo.png" alt=""></a></div>
+          <div class="footer__col"><a class="footer__logo" href="https://efic-congress.org/">
+              <picture>
+                <source data-srcset="/img/footer/logo.webp" type="image/webp"/>
+                <source data-srcset="/img/footer/logo.png" type="image/png"/><img class="lazy" data-src="/img/footer/logo.png" alt="undefined"/>
+              </picture></a></div>
           <div class="footer__col">
             <div class="footer__info">Rue de Londres - Londenstraat 18<br>B1050 Brussels<br>Phone:
               <a href="tel:+3222515510">+32 2 251 55 10</a><br>E-mail:
@@ -295,14 +380,22 @@
             </div>
           </div>
           <div class="footer__col">
-            <div class="footer__logos"><a class="footer__logos-item" href="https://www.meetinireland.com/" target="_blank" rel="nofollow"><img src="img/footer/logo-01.jpg" alt=""></a><a class="footer__logos-item" href="https://www.meetinireland.com/" target="_blank" rel="nofollow"><img src="img/footer/logo-02.jpg" alt=""></a></div>
+            <div class="footer__logos"><a class="footer__logos-item" href="https://www.meetinireland.com/" target="_blank" rel="nofollow">
+                <picture>
+                  <source data-srcset="/img/footer/logo-01.webp" type="image/webp"/>
+                  <source data-srcset="/img/footer/logo-01.jpg" type="image/jpg"/><img class="lazy" data-src="/img/footer/logo-01.jpg" alt="undefined"/>
+                </picture></a><a class="footer__logos-item" href="https://www.meetinireland.com/" target="_blank" rel="nofollow">
+                <picture>
+                  <source data-srcset="/img/footer/logo-02.webp" type="image/webp"/>
+                  <source data-srcset="/img/footer/logo-02.jpg" type="image/jpg"/><img class="lazy" data-src="/img/footer/logo-02.jpg" alt="undefined"/>
+                </picture></a></div>
             <div class="footer__policy">
               © European Pain Federation EFIC |
               <a href="https://efic-congress.org/how-we-work/privacy-policy/" target="_blank">Privacy Policy</a>
             </div>
           </div>
           <div class="footer__col">
-            <div class="footer__socials"><a class="footer__socials-item" href="https://www.facebook.com/EFICorg" target="_blank" rel="nofollow"><img src="img/footer/fb.svg" alt=""></a><a class="footer__socials-item" href="https://twitter.com/EFIC_org" target="_blank" rel="nofollow"><img src="img/footer/tw.svg" alt=""></a><a class="footer__socials-item" href="" target="_blank" rel="nofollow"><img src="img/footer/ld.svg" alt=""></a><a class="footer__socials-item" href="https://www.instagram.com/efic_org/" target="_blank" rel="nofollow"><img src="img/footer/inst.svg" alt=""></a></div>
+            <div class="footer__socials"><a class="footer__socials-item" href="https://www.facebook.com/EFICorg" target="_blank" rel="nofollow"><img class="lazy" data-src="img/footer/fb.svg" alt=""></a><a class="footer__socials-item" href="https://twitter.com/EFIC_org" target="_blank" rel="nofollow"><img class="lazy" data-src="img/footer/tw.svg" alt=""></a><a class="footer__socials-item" href="" target="_blank" rel="nofollow"><img class="lazy" data-src="img/footer/ld.svg" alt=""></a><a class="footer__socials-item" href="https://www.instagram.com/efic_org/" target="_blank" rel="nofollow"><img class="lazy" data-src="img/footer/inst.svg" alt=""></a></div>
           </div>
         </div>
       </div>

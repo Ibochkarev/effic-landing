@@ -9,6 +9,10 @@ const lazyLoadInstance = new LazyLoad({});
 let headerHeight = $('.header').height();
 let windowWidth = $(window).width();
 
+let sections = $('section');
+
+let firstSectionTop = $(sections[0]).height() + $(sections[0]).offset().top;
+
 $('.header__burger').on('click', function() {
     $('.header').toggleClass('open');
     $('body, html').toggleClass('overflow-y-hidden');
@@ -41,12 +45,12 @@ $('a.scroll').on('click', function() {
 $(window).on('scroll', function() {
     let scrollTop = $(window).scrollTop();
     
-    if (scrollTop > 1) {
+    if (scrollTop > firstSectionTop) {
         $('.header').addClass('js-fixed');
-        $('body').addClass('js-fixed');
+        $('main').addClass('js-fixed');
     } else {
         $('.header').removeClass('js-fixed');
-        $('body').removeClass('js-fixed');
+        $('main').removeClass('js-fixed');
     }
 });
 
@@ -59,16 +63,14 @@ mobileContact(windowWidth);
 
 function mobileContact(widthOfWindow) {
     switch(true) {
-        case widthOfWindow < 991:
-            if ($('.header__menu-contact-mobile .header__menu-links').length == 0) {
-                $('.header__menu-contact-mobile').append($('.header__menu-links'));
-                console.log('1')
+        case widthOfWindow < 1099:
+            if ($('.header__mobile .header__menu').length == 0) {
+                $('.header__mobile').append($('.header__menu'));
             }
         break; 
-        case widthOfWindow > 991:
-            if ($('.header__menu-contact .header__menu-links').length == 0) {
-                $('.header__menu-contact').append($('.header__menu-links'));
-                console.log('2')
+        case widthOfWindow > 1099:
+            if ($('.header__right .header__menu-wrapper header__menu').length == 0) {
+                $('.header__right .header__menu-wrapper').append($('.header__menu'));
             }
         break;
     }
@@ -108,3 +110,22 @@ function onEntry(entry) {
   for (let elm of elements) {
     observer.observe(elm);
 }
+
+$('.header__menu-item').each(function() {
+    let item = $(this);
+
+    if ($('.header__submenu', $(this)).length !== 0) {
+        $(this).addClass('header__submenu-wrapper');
+    }
+});
+
+
+$('.header__search').on('click', function() {
+    $('.header__menu-wrapper').toggleClass('hide');
+    $('.header__form').toggleClass('hide');
+});
+
+$('.header__form-close').on('click', function() {
+    $('.header__menu-wrapper').toggleClass('hide');
+    $('.header__form').toggleClass('hide');
+});
