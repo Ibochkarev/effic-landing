@@ -73,6 +73,11 @@
   &__item {
     display: flex;
     align-items: center;
+    animation: textLeft 1s ease;
+
+    &:nth-child(2n) {
+      animation: textRight 1s ease;
+    }
 
     &-num {
       margin-right: 40px;

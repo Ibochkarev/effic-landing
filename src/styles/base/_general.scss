@@ -25,18 +25,6 @@ body {
   font-style: normal;
   letter-spacing: normal;
   flex-direction: column;
-
-  &.js-fixed {
-    margin-top: 134px;
-
-    @media screen and (max-width: 991px) {
-      margin-top: 94px;
-    }
-
-    @media screen and (max-width: 600px) {
-      margin-top: 78px;
-    }
-  }
 }
 
 .main {
@@ -52,6 +40,27 @@ body {
       margin: 0;
     }
   }
+
+  &.js-fixed {
+    margin-top: 184px;
+  
+    @media screen and (max-width: 991px) {
+      margin-top: 94px;
+    }
+  
+    @media screen and (max-width: 600px) {
+      margin-top: 78px;
+    }
+  }
+}
+
+.element-animation {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.element-show {
+  opacity: 1;
 }
 
 .lazy,
@@ -364,6 +373,10 @@ img {
   overflow-y: hidden !important;
 }
 
+.hide {
+  display: none !important;
+}
+
 @keyframes show {
   from {
     opacity: 0;
@@ -425,5 +438,15 @@ img {
 
   to {
     width: 150px;
+  }
+}
+
+@keyframes showHeader {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }

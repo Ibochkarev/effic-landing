@@ -3,7 +3,7 @@ footer.footer
     .footer__wrapper
       .footer__col
         a.footer__logo(href="https://efic-congress.org/")
-          img(src="img/footer/logo.png", alt="")
+          +webp('footer/logo', 'png', 'lazy')
       .footer__col
         .footer__info
           | Rue de Londres - Londenstraat 18
@@ -20,9 +20,9 @@ footer.footer
       .footer__col
         .footer__logos
           a.footer__logos-item(href="https://www.meetinireland.com/" target="_blank" rel="nofollow")
-            img(src="img/footer/logo-01.jpg", alt="")
+            +webp('footer/logo-01', 'jpg', 'lazy')
           a.footer__logos-item(href="https://www.meetinireland.com/" target="_blank" rel="nofollow")
-            img(src="img/footer/logo-02.jpg", alt="")
+            +webp('footer/logo-02', 'jpg', 'lazy')
         .footer__policy © European Pain Federation EFIC |
           |
           |
@@ -30,10 +30,10 @@ footer.footer
       .footer__col
         .footer__socials
           a.footer__socials-item(href="https://www.facebook.com/EFICorg" target="_blank" rel="nofollow")
-            img(src="img/footer/fb.svg", alt="")
+            img.lazy(data-src="img/footer/fb.svg", alt="")
           a.footer__socials-item(href="https://twitter.com/EFIC_org" target="_blank" rel="nofollow")
-            img(src="img/footer/tw.svg", alt="")
+            img.lazy(data-src="img/footer/tw.svg", alt="")
           a.footer__socials-item(href="" target="_blank" rel="nofollow")
-            img(src="img/footer/ld.svg", alt="")
+            img.lazy(data-src="img/footer/ld.svg", alt="")
           a.footer__socials-item(href="https://www.instagram.com/efic_org/" target="_blank" rel="nofollow")
-            img(src="img/footer/inst.svg", alt="")
+            img.lazy(data-src="img/footer/inst.svg", alt="")

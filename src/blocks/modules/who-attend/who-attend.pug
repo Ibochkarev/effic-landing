@@ -3,22 +3,22 @@
     {
       title: "RESEARCHERS",
       text: "EFIC is the largest cutting-edge pain research congress in Europe",
-      img: "01.jpg"
+      img: "01"
     },
     {
       title: "CLINICIANS",
       text: "Discuss recent clinical findings with renowned experts in their field and refresh your basic pain practice knowledge",
-      img: "02.jpg"
+      img: "02"
     },
     {
       title: "ALLIED PROFESSIONALS",
       text: "EFIC promotes interprofessionalism and all healthcare professionals will benefit and find content to their needs",
-      img: "03.jpg"
+      img: "03"
     },
     {
       title: "GENERAL PRACTICIONERS",
       text: "In 2022 we are adding a special focus for GPs, providing generalists with the information they need to understand pain",
-      img: "04.jpg"
+      img: "04"
     }
   ]
 
@@ -30,7 +30,7 @@ section.who-attend
         each attend_item in attend
           .who-attend__item.element-animation
             .who-attend__item-image
-              img(src="img/who-attend/" + attend_item.img alt="")
+              +webp('who-attend/' + attend_item.img, 'jpg', 'lazy')
             .who-attend__item-info
               .who-attend__item-title= attend_item.title
               .who-attend__item-text= attend_item.text

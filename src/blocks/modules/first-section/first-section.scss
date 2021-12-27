@@ -9,6 +9,10 @@
     margin-bottom: 45px;
   }
 
+  @media (max-width: 600px) {
+    margin: 20px 0;
+  }
+
   &__headline {
     display: flex;
     align-items: center;

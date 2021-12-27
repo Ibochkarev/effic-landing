@@ -1,57 +1,122 @@
+-
+  const menu = [
+    {
+      href: 'https://efic-congress.org/registration/',
+      text: 'Registration',
+      items: []
+    },
+    {
+      href: '',
+      text: 'Congress information',
+      items: [
+        {
+          href: 'https://efic-congress.org/financial-aid/',
+          text: 'Financial Aid'
+        },
+        {
+          href: 'https://efic-congress.org/efic2022-welcome-messages/',
+          text: 'Welcome to #EFIC2022'
+        },
+        {
+          href: 'https://efic-congress.org/efic2022-discover-dublin/',
+          text: 'Discover Dublin'
+        },
+        {
+          href: 'https://efic-congress.org/venue/',
+          text: 'Our Venue'
+        },
+        {
+          href: 'https://efic-congress.org/health-and-safety/',
+          text: 'Health & Safety'
+        }
+      ]
+    },
+    {
+      href: '',
+      text: 'Scientific Information',
+      items: [
+        {
+          href: 'https://efic-congress.org/scientific-programme/',
+          text: 'Scientific Programme',
+        },
+        {
+          href: 'https://efic-congress.org/efic2022-plenary-sessions/',
+          text: '#EFIC2022 Plenary Sessions',
+        },
+        {
+          href: 'https://efic-congress.org/abstract-submission/',
+          text: 'Abstract Submission',
+        },
+        {
+          href: 'https://efic-congress.org/congress-topics/',
+          text: 'Congress Topics',
+        },
+        {
+          href: 'https://efic-congress.org/efic2022-committee/',
+          text: 'Scientific Programme Committee',
+        },
+        {
+          href: 'https://efic-congress.org/efic2022-workshop-submission/',
+          text: 'Workshop Submission',
+        },
+      ]
+    },
+    {
+      href: 'https://efic-congress.org/news/',
+      text: 'News',
+      items: [
+        {
+          href: 'https://efic-congress.org/news/',
+          text: 'Newsroom',
+        },
+        {
+          href: 'https://efic-congress.org/promotional-toolkit/',
+          text: 'Promotional Toolkit',
+        },
+        {
+          href: 'https://efic-congress.org/contact/',
+          text: 'Contact',
+        }
+      ]
+    },
+    {
+      href: 'https://efic-congress.org/sponsors-exhibitors/',
+      text: 'Sponsors &amp; Exhibitors',
+      items: []
+    }
+  ]
+
 header.header
-  .l-default
+  .l-default--full
     .header__wrapper
       .header__logo
-        +svgMono("logo")
-      //- .header__menu-items
-      //-   nav
-      //-     ul#top-menu.nav
-      //-       li.menu-item
-      //-         a(href="https://efic-congress.org/registration/") Registration
-      //-       li.menu-item
-      //-         a(href="#") Congress Information
-      //-         ul.sub-menu
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/financial-aid/") Financial Aid
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/efic2022-welcome-messages/") Welcome to #EFIC2022
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/efic2022-discover-dublin/") Discover Dublin
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/venue/") Our Venue
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/health-and-safety/") Health and Safety
-      //-       li.menu-item
-      //-         a(href="#") Scientific Information
-      //-         ul.sub-menu
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/scientific-programme/") Scientific Programme
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/efic2022-plenary-sessions/") #EFIC2022 Plenary Sessions
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/abstract-submission/") Abstract Submission
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/congress-topics/") Congress Topics
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/efic2022-committee/") Scientific Programme Committee
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/efic2022-workshop-submission/") Workshop Submission
-      //-       li.menu-item
-      //-         a(href="https://efic-congress.org/news/") News
-      //-         ul.sub-menu
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/news/") Newsroom
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/promotional-toolkit/") Promotional Toolkit
-      //-           li.menu-item
-      //-             a(href="https://efic-congress.org/contact/") Contact
-      //-       li.menu-item
-      //-         a(href="https://efic-congress.org/sponsors-exhibitors/") Sponsors &amp; Exhibitors
-      .header__burger
-        +svgMono("burger")
-  .header__menu
-    .header__menu-container
-      .header__menu-top
-        .l-menu
+        +webp('header/logo', 'png', 'lazy')
+      .header__right
+        .header__menu-wrapper
+          .header__menu
+            each menu_item in menu 
+              .header__menu-item  
+                .header__menu-link
+                  - if (menu_item.href !== '')
+                    a(href=menu_item.href)!= menu_item.text
+                  - else 
+                    span= menu_item.text
+                  - if (menu_item.items.length !== 0)
+                    .header__menu-arrow 
+                      +svgMono('dropdown-arrow')  
+                - if (menu_item.items.length !== 0)
+                  .header__submenu  
+                    each submenu_item in menu_item.items
+                      a.header__submenu-item(href=submenu_item.href)= submenu_item.text
           .header__burger
-            +svgMono("burger")
+            span 
+            span 
+            span 
+          .header__search 
+            +svgMono('search')
+        .header__form.hide
+          input(type="text" placeholder="Search ...")
+          .header__form-close 
+            span 
+            span 
+  .header__mobile

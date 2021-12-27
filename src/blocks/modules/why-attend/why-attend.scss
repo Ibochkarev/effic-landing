@@ -48,6 +48,20 @@
   &__item {
     display: flex;
     align-items: center;
+    
+    &.element-animation.element-show {
+      opacity: 1;
+      transition: opacity 1s;
+      animation: textLeft 1s ease;
+    }
+
+    &:nth-child(2n) {
+      &.element-animation.element-show {
+        opacity: 1;
+        transition: opacity 1s;
+        animation: textRight 1s ease;
+      }
+    }
 
     &-icon {
       width: 145px;
