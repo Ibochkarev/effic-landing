@@ -72,8 +72,8 @@
     &-info {
       z-index: 1;
       position: relative;
-      min-height: 294px;
-      padding: 35px 100px 50px;
+      min-height: 300px;
+      padding: 35px 75px 50px;
       background: rgba(#239d4a, 0.8);
 
       @media (max-width: 1366px) {
@@ -97,7 +97,7 @@
     }
 
     &-title {
-      max-width: 405px;
+      max-width: 440px;
       margin-bottom: 10px;
       font-size: 38px;
       font-weight: bold;
@@ -118,13 +118,11 @@
     }
 
     &-text {
-      max-width: 405px;
       font-size: 24px;
       font-weight: 600;
       line-height: 29px;
 
       @media (max-width: 1366px) {
-        max-width: 100%;
         font-size: 18px;
         line-height: 1.5;
       }

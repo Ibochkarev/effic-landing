@@ -1,10 +1,10 @@
 .header {
-  position: relative;
   z-index: 1000;
+  position: relative;
 
   .l-default--full {
-    position: static;
     z-index: 1000;
+    position: static;
   }
 
   &__wrapper {
@@ -41,10 +41,10 @@
   }
 
   &__menu {
-    order: 0;
     display: flex;
     align-items: flex-start;
     margin-right: 40px;
+    order: 0;
 
     @media (max-width: 1599px) {
       margin-right: 20px;
@@ -53,19 +53,19 @@
     &-wrapper {
       display: flex;
       align-items: center;
-      animation: hideToBottom .4s ease;
+      animation: hideToBottom 0.4s ease;
     }
 
     &-item {
+      cursor: pointer;
       position: relative;
       display: flex;
-      flex-direction: column;
-      font-size: 18px;
-      line-height: 120%;
       min-width: 100px;
-      cursor: pointer;
       margin-right: 40px;
       padding: 0 6px;
+      font-size: 18px;
+      line-height: 120%;
+      flex-direction: column;
 
       @media (max-width: 1399px) {
         font-size: 14px;
@@ -80,11 +80,11 @@
       }
 
       &:hover {
-        text-shadow: 1.2px 0 0 #239D4A;
-        color: #239D4A;
+        color: #239d4a;
+        text-shadow: 1.2px 0 0 #239d4a;
 
         svg {
-          fill: #239D4A;
+          fill: #239d4a;
         }
       }
     }
@@ -96,36 +96,36 @@
     }
 
     &-arrow {
-      font-size: 8px;
       margin-left: 8px;
+      font-size: 8px;
     }
   }
 
   &__submenu {
+    z-index: 333;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 333;
     display: none;
-    flex-direction: column;
     width: 100%;
     padding: 34px 6px 0;
-    animation: show .4s ease;
+    flex-direction: column;
+    animation: show 0.4s ease;
     &-item {
+      margin-bottom: 8px;
       font-size: 14px;
       line-height: 120%;
-      margin-bottom: 8px;
 
       &:hover {
+        text-decoration: underline;
         color: #fff;
         text-shadow: 1px 0 0 #fff;
-        text-decoration: underline;
         svg {
           fill: #fff;
         }
       }
     }
-    
+
     &-wrapper {
       &:hover {
         color: #fff !important;
@@ -133,17 +133,18 @@
           display: flex;
           background: #7ac48e;
         }
-  
+
         &.header__menu-item {
           color: #fff !important;
         }
-  
-        span, .header__menu-link {
+
+        span,
+        .header__menu-link {
+          z-index: 334;
           position: relative;
           color: #fff !important;
-          z-index: 334;
         }
-  
+
         svg {
           fill: #fff;
         }
@@ -152,8 +153,8 @@
   }
 
   &__logo {
+    z-index: z("burger");
     position: relative;
-    z-index: z('burger');
     min-width: 218px;
 
     @media (max-width: 1199px) {
@@ -170,7 +171,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    animation: hideToTop .4s ease;
+    animation: hideToTop 0.4s ease;
 
     input {
       width: calc(100% - 30px);
@@ -181,10 +182,10 @@
     }
 
     &-close {
+      cursor: pointer;
       position: relative;
       width: 30px;
       height: 30px;
-      cursor: pointer;
       margin-left: auto;
       span {
         position: absolute;
@@ -206,28 +207,28 @@
   }
 
   &__search {
+    cursor: pointer;
     display: flex;
     align-items: center;
     order: 9;
-    cursor: pointer;
   }
 
   &.js-fixed {
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: #fff;
-    z-index: 1000;
-    animation: showHeader .4s ease-in-out;
+    animation: showHeader 0.4s ease-in-out;
 
     .header__wrapper {
       padding: 20px 0;
     }
     .header__logo {
-      min-width: 140px;
       max-width: 140px;
-      
+      min-width: 140px;
+
       @media (max-width: 1099px) {
         min-width: 0;
       }
@@ -235,16 +236,16 @@
   }
 
   &__mobile {
+    z-index: z("menu");
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: z('menu');
-    background: #fff;
-    transform: translateX(-200%);
-    transition: all .4s ease;
     padding: 20px 16px;
+    background: #fdfff3;
+    transform: translateX(-200%);
+    transition: all 0.4s ease;
     overflow-y: scroll;
 
     @media (max-width: 1199px) {
@@ -258,12 +259,16 @@
     @media (max-width: 600px) {
       height: calc(100vh - 90px);
     }
+
+    .header__submenu-item:hover {
+      color: #000;
+    }
     .header {
       &__menu {
         display: flex;
-        flex-direction: column;
         margin-right: 0;
         padding: 0;
+        flex-direction: column;
         overflow-y: scroll;
 
         &-arrow {
@@ -271,17 +276,17 @@
         }
 
         &-item {
+          margin-bottom: 20px;
           font-size: 18px;
           font-weight: 900;
           color: #000 !important;
-          margin-bottom: 20px;
           &:hover {
-            color: #000 !important;
             font-weight: 900;
+            color: #000 !important;
             text-shadow: none;
           }
           svg {
-            fill: #239D4A;
+            fill: #239d4a;
           }
         }
 
@@ -291,7 +296,8 @@
           }
         }
 
-        &-link, span {
+        &-link,
+        span {
           color: #000 !important;
         }
       }
@@ -299,8 +305,8 @@
       &__submenu {
         position: static;
         display: flex;
-        flex-direction: column;
         padding: 20px 6px 0;
+        flex-direction: column;
 
         &:hover {
           background: none;
@@ -310,15 +316,15 @@
   }
 
   &__burger {
-    order: 10;
+    z-index: z("burger");
     position: relative;
-    z-index: z('burger');
     display: none;
     width: 30px;
     height: 30px;
-    padding: 7px;
     margin-left: 20px;
-    
+    padding: 7px;
+    order: 10;
+
     @media (max-width: 1099px) {
       display: block;
     }
@@ -327,8 +333,8 @@
       left: 0;
       width: 70%;
       height: 2px;
-      background: #239D4A;
-      transition: all .4s ease;
+      background: #239d4a;
+      transition: all 0.4s ease;
 
       &:first-child {
         top: 8px;
@@ -345,7 +351,8 @@
   }
 
   &.open {
-    background: #fff;
+    background: #fdfff3;
+
     .header {
       &__burger {
         span {
@@ -354,11 +361,11 @@
           &:first-child {
             transform: translate(-50%, -50%) rotate(45deg);
           }
-    
+
           &:nth-child(2) {
             display: none;
           }
-    
+
           &:last-child {
             transform: translate(-50%, -50%) rotate(-45deg);
           }

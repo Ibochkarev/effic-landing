@@ -1,0 +1,37 @@
+-
+  const registration = [
+    {
+      title: "Registration now open",
+      icon: "registration.png",
+      link: "/registration/",
+      newWindowOpen: false
+    },
+    {
+      title: "Preliminary programme",
+      icon: "programme.png",
+      link: "/abstract-submission/",
+      newWindowOpen: true
+    },
+    {
+      title: "Submit your abstract",
+      icon: "submit.png",
+      link: "/abstract-submission/",
+      newWindowOpen: false
+    }
+  ]
+
+section.registration
+  .l-default
+    .registration__wrapper
+      .registration__list
+        each registration_item in registration
+          -if (registration_item.newWindowOpen == true)
+            a.registration__item.element-animation(href=registration_item.link, target="_blank")
+              .registration__item-icon
+                img.lazy(data-src="img/registration/" + registration_item.icon alt=registration_item.title)
+              .registration__item-title= registration_item.title
+          - else
+            a.registration__item.element-animation(href=registration_item.link)
+              .registration__item-icon
+                img.lazy(data-src="img/registration/" + registration_item.icon alt=registration_item.title)
+              .registration__item-title= registration_item.title

@@ -1,0 +1,81 @@
+.registration {
+  padding: 77px 0 89px;
+
+  @media (max-width: 1449px) {
+    padding: 45px 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1449px) {
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 290px;
+    padding-bottom: 8px;
+    border-bottom: 5px solid $a-color-green;
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-right: 120px;
+
+      @media (max-width: 1449px) {
+        margin-right: 85px;
+      }
+
+      @media (max-width: 991px) {
+        margin-right: 45px;
+      }
+
+      @media (max-width: 575px) {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 575px) {
+      width: 100%;
+      border-bottom: 2px solid $a-color-green;
+    }
+
+    &-icon {
+      margin-right: 13px;
+      flex: none;
+
+      @media (max-width: 575px) {
+        margin-right: 10px;
+      }
+
+      img {
+        @media (max-width: 991px) {
+          height: 32px;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: $a-color-green;
+      text-transform: uppercase;
+
+      @media (max-width: 991px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

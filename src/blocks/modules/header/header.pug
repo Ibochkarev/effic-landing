@@ -89,34 +89,34 @@
 header.header
   .l-default--full
     .header__wrapper
-      .header__logo
+      a.header__logo(href="https://efic-congress.org/")
         +webp('header/logo', 'png', 'lazy')
       .header__right
         .header__menu-wrapper
           .header__menu
-            each menu_item in menu 
-              .header__menu-item  
+            each menu_item in menu
+              .header__menu-item
                 .header__menu-link
                   - if (menu_item.href !== '')
                     a(href=menu_item.href)!= menu_item.text
-                  - else 
+                  - else
                     span= menu_item.text
                   - if (menu_item.items.length !== 0)
-                    .header__menu-arrow 
-                      +svgMono('dropdown-arrow')  
+                    .header__menu-arrow
+                      +svgMono('dropdown-arrow')
                 - if (menu_item.items.length !== 0)
-                  .header__submenu  
+                  .header__submenu
                     each submenu_item in menu_item.items
                       a.header__submenu-item(href=submenu_item.href)= submenu_item.text
           .header__burger
-            span 
-            span 
-            span 
-          .header__search 
+            span
+            span
+            span
+          .header__search
             +svgMono('search')
         .header__form.hide
           input(type="text" placeholder="Search ...")
-          .header__form-close 
-            span 
-            span 
+          .header__form-close
+            span
+            span
   .header__mobile

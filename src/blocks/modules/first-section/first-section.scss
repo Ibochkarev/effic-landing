@@ -1,13 +1,5 @@
 .first-section {
-  margin: 86px 0 160px;
-
-  @media (max-width: 1199px) {
-    margin-bottom: 65px;
-  }
-
-  @media (max-width: 991px) {
-    margin-bottom: 45px;
-  }
+  margin: 35px 0;
 
   @media (max-width: 600px) {
     margin: 20px 0;
@@ -70,18 +62,6 @@
 
     @media (max-width: 991px) {
       height: auto;
-    }
-  }
-
-  &__banner {
-    margin-bottom: 82px;
-
-    @media (max-width: 1199px) {
-      margin-bottom: 65px;
-    }
-
-    @media (max-width: 991px) {
-      margin-bottom: 45px;
     }
   }
 }

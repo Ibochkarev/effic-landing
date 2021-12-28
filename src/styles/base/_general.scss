@@ -43,11 +43,11 @@ body {
 
   &.js-fixed {
     margin-top: 184px;
-  
+
     @media screen and (max-width: 991px) {
       margin-top: 94px;
     }
-  
+
     @media screen and (max-width: 600px) {
       margin-top: 78px;
     }
@@ -206,7 +206,7 @@ img {
     position: relative;
     margin-bottom: 20px;
     font-family: $primary_font;
-    font-size: 64px;
+    font-size: 56px;
     line-height: 120%;
     text-transform: uppercase;
     color: $a-color-blue;
@@ -238,7 +238,7 @@ img {
     z-index: z("l-default");
     position: relative;
     width: 100%;
-    max-width: 1355px;
+    max-width: 1080px;
     margin: 0 auto;
     box-sizing: border-box;
 
