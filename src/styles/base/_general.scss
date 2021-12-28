@@ -206,14 +206,14 @@ img {
     position: relative;
     margin-bottom: 20px;
     font-family: $primary_font;
-    font-size: 56px;
+    font-size: 30px;
     line-height: 120%;
     text-transform: uppercase;
     color: $a-color-blue;
     transform: translateX(0);
 
     @media screen and (max-width: 1449px) {
-      font-size: 36px;
+      font-size: 28px;
     }
 
     @media screen and (max-width: 600px) {

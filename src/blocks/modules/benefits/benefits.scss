@@ -70,16 +70,15 @@
 
       &__text {
         margin-bottom: 25px;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 29px;
 
         @media (max-width: 1449px) {
-          font-size: 18px;
+          font-size: 16px;
           line-height: 1.25;
         }
 
         @media (max-width: 991px) {
-          font-size: 16px;
           margin-bottom: 15px;
         }
       }

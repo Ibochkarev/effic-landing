@@ -106,14 +106,10 @@
     }
 
     &-text {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 1.4;
       color: $a-color-blue;
-
-      @media (max-width: 1449px) {
-        font-size: 16px;
-      }
 
       @media (max-width: 767px) {
         font-size: 14px;

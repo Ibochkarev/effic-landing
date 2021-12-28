@@ -1817,7 +1817,7 @@ img {
   position: relative;
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
-  font-size: 56px;
+  font-size: 30px;
   line-height: 120%;
   text-transform: uppercase;
   color: #245675;
@@ -2489,17 +2489,17 @@ img {
 
 .effic2019__item-num {
   margin-right: 30px;
-  font-size: 64px;
+  font-size: 52px;
   font-weight: bold;
   color: #239d4a;
 }
 
 .effic2019__item-num span {
-  font-size: 98px;
+  font-size: 78px;
 }
 
 .effic2019__item-text {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.45;
 }
@@ -2645,7 +2645,7 @@ img {
 
 .why-attend__item-title {
   max-width: 385px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.45;
 }
@@ -2714,7 +2714,7 @@ img {
 }
 
 .members__item-text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
   color: #245675;
@@ -2775,7 +2775,7 @@ img {
 }
 
 .who-attend__item-text {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 29px;
 }
@@ -2858,7 +2858,7 @@ img {
 
 .benefits__list-item__text {
   margin-bottom: 25px;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 29px;
 }
 
@@ -3049,7 +3049,7 @@ img {
 
 @media screen and (max-width: 1449px) {
   .title--h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 
@@ -3073,11 +3073,7 @@ img {
 
   .effic2019__item-num {
     margin-right: 20px;
-    font-size: 48px;
-  }
-
-  .effic2019__item-text {
-    font-size: 24px;
+    font-size: 42px;
   }
 
   .programme {
@@ -3128,10 +3124,6 @@ img {
     font-size: 18px;
   }
 
-  .members__item-text {
-    font-size: 16px;
-  }
-
   .who-attend {
     margin-bottom: 160px;
   }
@@ -3156,7 +3148,7 @@ img {
   }
 
   .benefits__list-item__text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25;
   }
 
@@ -3195,7 +3187,6 @@ img {
   }
 
   .who-attend__item-text {
-    font-size: 18px;
     line-height: 1.5;
   }
 }
@@ -3308,10 +3299,6 @@ img {
 
   .effic2019__item-num span {
     font-size: 64px;
-  }
-
-  .effic2019__item-text {
-    font-size: 16px;
   }
 
   .why-attend__title {
@@ -3444,7 +3431,6 @@ img {
   }
 
   .benefits__list-item__text {
-    font-size: 16px;
     margin-bottom: 15px;
   }
 
