@@ -1872,7 +1872,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.14;
   text-align: center;
@@ -3040,10 +3040,6 @@ img {
 }
 
 @media (max-width: 1499px) {
-  .btn {
-    font-size: 24px;
-  }
-
   .first-section__headline {
     margin-bottom: 65px;
   }

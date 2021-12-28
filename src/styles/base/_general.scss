@@ -304,7 +304,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.14;
   text-align: center;
@@ -313,10 +313,6 @@ img {
   border-radius: 6px;
   background-color: $a-color-green;
   @include tr("all");
-
-  @media (max-width: 1499px) {
-    font-size: 24px;
-  }
 
   @media (max-width: 991px) {
     font-size: 18px;
